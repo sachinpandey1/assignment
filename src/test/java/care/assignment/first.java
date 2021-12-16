@@ -10,7 +10,8 @@ public class first {
 	
 public static void main(String args[]) throws InterruptedException{
 		
-		System.setProperty( "webdriver.chrome.driver", "F:\\My Folder\\CARE\\CromeDriver\\chromedriver.exe" );
+	    System.setProperty( "webdriver.chrome.driver", ".\\lib\\chromedriver.exe" );
+	//	System.setProperty( "webdriver.chrome.driver", "C:\\Users\\Sachin\\workspace\\assignment\\lib\\chromedriver.exe" );
 
 		WebDriver driver = new ChromeDriver();
 		
@@ -52,7 +53,7 @@ public static void main(String args[]) throws InterruptedException{
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("Notebook")).click();
 		
-		//  Deleting Note - 1
+/*		//  Deleting Note - 1
 		driver.findElement(By.xpath("//h3 [contains(text(), 'xyz' )]//descendant::a//following::a")).click();
 		Alert alertobject = driver.switchTo().alert();
 		alertobject.accept();
@@ -68,7 +69,7 @@ public static void main(String args[]) throws InterruptedException{
 		driver.findElement(By.xpath("//h3 [contains(text(), 'Notes_1Hello World' )]//descendant::a//following::a")).click();
 		Alert alertobject3 = driver.switchTo().alert();
 		alertobject3.accept();
-		
+		*/
 		
 		//  Adding new note - 1
 		driver.findElement(By.xpath("//a/img[@title='Add new note in my personal notebook']")).click();
@@ -86,7 +87,7 @@ public static void main(String args[]) throws InterruptedException{
 		}else{ System.out.println(" Notes is NOT there : " + check); }
 		Thread.sleep(2000);
 	
-		
+	/*	
 		// Editing Note - 1
 		driver.findElement(By.xpath("//h3 [contains(text(), 'Notes_1' )]//descendant::a")).click();
 	                //  Adding Value new note - 1
@@ -103,7 +104,7 @@ public static void main(String args[]) throws InterruptedException{
 				System.out.println(" 'Hello World' is now Added");
 			}else{ System.out.println(" Notes is NOT there : " + check); }
 			Thread.sleep(2000);
-		
+		*/
 		
 		//  Adding new note - 2
 			driver.findElement(By.xpath("//a/img[@title='Add new note in my personal notebook']")).click();
